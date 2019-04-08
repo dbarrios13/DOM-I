@@ -42,12 +42,25 @@ let logo = document.querySelector('header #logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navLinks = Array.from(document.querySelectorAll('header nav a'));
+
+let homeLink = document.createElement('a');
+homeLink.textContent = 'Home';
+homeLink.style.color = 'green';
+document.querySelector('header nav').prepend(homeLink);
+
+let careerLink = document.createElement('a');
+careerLink.textContent = 'Careers';
+careerLink.style.color = 'green';
+document.querySelector('header nav').appendChild(careerLink);
+
 function addLinks() {
   for(i = 0; i < navLinks.length; i++){
-    navLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];    
+    navLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+    navLinks[i].style.color = 'green';
   }
 };
 addLinks();
+
 
 let ctaHeader = document.querySelector('.cta h1');
 ctaHeader.textContent = siteContent.cta['h1'];
@@ -81,4 +94,6 @@ contact[2].textContent = siteContent["contact"]["phone"];
 contact[3].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+
 
