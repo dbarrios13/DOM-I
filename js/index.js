@@ -68,6 +68,13 @@ let ctaImage = document.querySelector('#cta-img');
 ctaImage.src = siteContent.cta['img-src'];
 let ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent.cta['button'];
+ctaButton.addEventListener('click', function(){
+  if(ctaHeader.textContent == 'DOM Is Awesome'){
+    ctaHeader.textContent = 'DOM 2 is better';
+  } else {
+    ctaHeader.textContent = siteContent.cta['h1'];
+  }
+});
 
 
 let textContentHeaders = Array.from(document.querySelectorAll('.text-content h4'));
@@ -95,5 +102,8 @@ contact[3].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector('footer p').textContent = siteContent.footer.copyright;
 
-
+let jumbo = document.querySelector('.cta');
+jumbo.style.background = 'lightgray';
+jumbo.style.borderRadius = '5px';
+jumbo.style.padding = '10px';
 
