@@ -44,11 +44,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navLinks = Array.from(document.querySelectorAll('header nav a'));
 
 let homeLink = document.createElement('a');
+homeLink.href = '#';
 homeLink.textContent = 'Home';
 homeLink.style.color = 'green';
 document.querySelector('header nav').prepend(homeLink);
 
 let careerLink = document.createElement('a');
+careerLink.href = '#';
 careerLink.textContent = 'Careers';
 careerLink.style.color = 'green';
 document.querySelector('header nav').appendChild(careerLink);
